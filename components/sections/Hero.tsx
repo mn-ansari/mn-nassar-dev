@@ -122,14 +122,10 @@ const Hero: React.FC = () => {
             {/* Animated background glow - enhanced */}
             <motion.div 
               animate={{ 
-                boxShadow: [
-                  '0 0 60px rgba(59, 130, 246, 0.3)',
-                  '0 0 120px rgba(59, 130, 246, 0.5)',
-                  '0 0 60px rgba(59, 130, 246, 0.3)'
-                ]
+                opacity: [0.3, 0.6, 0.3]
               }}
               transition={{ duration: 4, repeat: Infinity }}
-              className="absolute inset-0 -z-10 rounded-3xl"
+              className="absolute inset-0 -z-10 rounded-3xl shadow-2xl"
             ></motion.div>
 
             {/* Main image container with elegant frame */}
@@ -144,15 +140,10 @@ const Hero: React.FC = () => {
               {/* Animated overlay shine effect */}
               <motion.div
                 animate={{ 
-                  opacity: [0, 0.3, 0],
-                  background:[
-                    'linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent)',
-                    'linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent)',
-                    'linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent)'
-                  ]
+                  opacity: [0, 0.3, 0]
                 }}
                 transition={{ duration: 3, repeat: Infinity }}
-                className="absolute inset-0 z-30 pointer-events-none"
+                className="absolute inset-0 z-30 pointer-events-none bg-gradient-to-r from-transparent via-white/20 to-transparent"
               ></motion.div>
               
               {/* Profile image - showing upper body/face with animations */}
@@ -163,11 +154,10 @@ const Hero: React.FC = () => {
                 transition={{ duration: 0.3 }}
                 className="w-full h-full object-cover object-top scale-125 group-hover:grayscale-0 transition-all duration-300"
                 style={{
-                  objectPosition: 'center top',
                   maxHeight: '600px',
                   filter: 'brightness(1.05) contrast(1.1)',
                   transition: 'filter 0.3s ease'
-                }}
+                } as React.CSSProperties}
               />
               
               {/* Elegant overlay gradient at bottom */}
@@ -175,9 +165,9 @@ const Hero: React.FC = () => {
               
               {/* Premium animated border effect */}
               <motion.div 
-                animate={{ borderColor: ['rgba(59, 130, 246, 0.3)', 'rgba(59, 130, 246, 0.6)', 'rgba(59, 130, 246, 0.3)'] }}
+                animate={{ opacity: [0.3, 0.8, 0.3] }}
                 transition={{ duration: 3, repeat: Infinity }}
-                className="absolute inset-0 rounded-3xl border-2 z-10 group-hover:border-blue-400/80 transition-all duration-300"
+                className="absolute inset-0 rounded-3xl border-2 border-blue-400/50 z-10 group-hover:border-blue-400/80 transition-all duration-300"
               ></motion.div>
 
               {/* Corner accent lines - animated */}
