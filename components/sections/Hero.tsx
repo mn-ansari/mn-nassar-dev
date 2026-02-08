@@ -37,7 +37,7 @@ const Hero: React.FC = () => {
           variants={container}
           initial="hidden"
           animate="visible"
-          className="z-10"
+          className="z-10 order-last sm:order-first"
         >
           <motion.div variants={item}>
             <span className="inline-block px-4 py-2 rounded-full bg-blue-500/20 text-blue-400 text-sm font-semibold mb-6">
