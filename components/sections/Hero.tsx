@@ -64,7 +64,7 @@ const Hero: React.FC = () => {
             variants={item}
             className="text-lg text-blue-400 font-semibold mb-8"
           >
-            React • Next.js • Node.js • Python • FastAPI • LangChain
+            React • Next.js • Node.js • Python • TypeScript • N8N
           </motion.p>
 
           {/* CTA Buttons */}
